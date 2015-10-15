@@ -1,0 +1,2 @@
+
+include "trip-service", "trip-console","trip-web","trip-domain"

@@ -1,0 +1,8 @@
+apply plugin: 'spring-boot'
+bootRepackage {
+	classifier = 'exec'
+	}
+dependencies {
+	compile project(':trip-service')
+	compile project(':trip-domain')
+}

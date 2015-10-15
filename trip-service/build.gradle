@@ -1,0 +1,4 @@
+dependencies {
+	compile project(':trip-domain')
+	compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+}
