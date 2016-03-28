@@ -1,7 +1,3 @@
-apply plugin: 'spring-boot'
-bootRepackage {
-	classifier = 'exec'
-	}
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-velocity:1.2.6.RELEASE")
 	compile project(':trip-service')
