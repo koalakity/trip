@@ -24,5 +24,6 @@ public class Runner extends SpringBootServletInitializer {
 
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(Runner.class, args);
+		//new WeixinServerBootstrap("NaVjTJ7sqkLruzcy8").addHandler(DebugMessageHandler.global).startup();
 	}
 }
