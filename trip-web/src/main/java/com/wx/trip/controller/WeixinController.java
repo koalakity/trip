@@ -66,12 +66,23 @@ public class WeixinController {
 	
 	
 
+	/**微信授权回调
+	 * @param code
+	 * @param state
+	 * @param request
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/authorizeCallback")
 	public String authorizeCallback(String code, String state, HttpServletRequest request) throws Exception {
 		OauthToken oauthToken = oauthApi.getOauthToken(code);
 		return "redirect:" + state + "?openId=" + oauthToken.getOpenId();
 	}
 
+	/**微信jsconfig签名
+	 * @param url
+	 * @return
+	 */
 	@RequestMapping("/weixin/getWeixinJSConfig")
 	@ResponseBody
 	public Result<JSONObject> getWeixinJSConfig(String url) {
