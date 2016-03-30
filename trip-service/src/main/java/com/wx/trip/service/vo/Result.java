@@ -17,9 +17,6 @@ public class Result<T extends Serializable> implements Serializable {
 
 	private static final long serialVersionUID = -8508268287523566997L;
 	
-	/** 用户是否有礼物为领取 */
-	private Boolean pickallgiftornot;//用户没有领取礼品或者没有兑换电影票的时候都设置为true
-	
 	/** 类型 */
 	private Type type;
 	
@@ -32,14 +29,6 @@ public class Result<T extends Serializable> implements Serializable {
 	/** 构造函数 */
 	public Result() {
 		messages = new LinkedList<String>();
-	}
-
-	public Boolean getPickallgiftornot() {
-		return pickallgiftornot;
-	}
-
-	public void setPickallgiftornot(Boolean pickallgiftornot) {
-		this.pickallgiftornot = pickallgiftornot;
 	}
 
 	/**

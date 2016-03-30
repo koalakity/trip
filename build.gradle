@@ -36,4 +36,8 @@ subprojects {
     jar {
         manifest.attributes provider: 'weixin'
     }
+    
+    tasks.withType(JavaCompile) {
+    	options.encoding = 'UTF-8'
+	}
 }
