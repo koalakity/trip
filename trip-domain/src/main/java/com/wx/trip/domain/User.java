@@ -37,6 +37,10 @@ public class User extends AbstractEntity implements Serializable {
 	private Date lastLoginTime;
 
 	private String role;
+	
+	private String openId;//微信openId
+	
+	private String unionId;//
 
 	public String getUsername() {
 		return username;
@@ -109,5 +113,20 @@ public class User extends AbstractEntity implements Serializable {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	
+
+	public String getOpenId() {
+		return openId;
+	}
+
+	public void setOpenId(String openId) {
+		this.openId = openId;
+	}
+
+	public String getUnionId() {
+		return unionId;
+	}
+
+	public void setUnionId(String unionId) {
+		this.unionId = unionId;
+	}
 }
