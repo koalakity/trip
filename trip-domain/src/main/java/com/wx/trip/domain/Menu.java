@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -26,6 +27,9 @@ public class Menu extends AbstractEntity implements Serializable {
 	private String desc;
 	@OneToOne
 	private Image image;
+	
+	@ManyToOne
+	private Order order;
 	
 	public String getName() {
 		return name;
@@ -58,6 +62,15 @@ public class Menu extends AbstractEntity implements Serializable {
 		this.image = image;
 	}
 	
+	
+	public Order getOrder() {
+		return order;
+	}
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+
+
 	public enum Type{
 		MENUE,ORDER
 	}

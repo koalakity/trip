@@ -1,10 +1,11 @@
 package com.wx.trip.domain;
 
 import java.io.Serializable;
-import java.util.Map;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -20,7 +21,8 @@ public class Order extends AbstractEntity implements Serializable {
 	 */
 	private static final long serialVersionUID = 5481802525487992945L;
 	
-	private Map<Menu,Integer> menu;
+	@OneToMany(mappedBy="order")
+	private Set<Menu> menu;
 	
 	private Seat seat;
 	
@@ -28,11 +30,11 @@ public class Order extends AbstractEntity implements Serializable {
 	
 	private PayInfo payInfo;
 
-	public Map<Menu, Integer> getMenu() {
+	public Set<Menu> getMenu() {
 		return menu;
 	}
 
-	public void setMenu(Map<Menu, Integer> menu) {
+	public void setMenu(Set<Menu> menu) {
 		this.menu = menu;
 	}
 
