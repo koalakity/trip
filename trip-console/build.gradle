@@ -1,4 +1,5 @@
 dependencies {
 	compile project(':trip-service')
 	compile project(':trip-domain')
+	compile("org.springframework.boot:spring-boot-starter-thymeleaf:1.2.6.RELEASE")
 }
